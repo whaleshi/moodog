@@ -9,7 +9,7 @@ body,
     /* background: url('./components/MainBanner/images/wallPaper.jpg') center center / cover no-repeat; */
     background-size: cover;
     overflow-x: hidden;
-    background-color: #000;
+    background: linear-gradient(180deg, #000 10%, #222 100%);
 }
 
 .container {
@@ -88,7 +88,6 @@ body {
 .intro-description {
     font-size: 1.2rem;
     color: #ccc;
-    margin: 0 0 40px 0;
     line-height: 1.6;
     opacity: 0.9;
 }
@@ -145,7 +144,8 @@ body {
 
 /* 动画效果 */
 @keyframes cardFloat {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0px);
     }
     50% {
@@ -163,7 +163,8 @@ body {
 }
 
 @keyframes iconBounce {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0px);
     }
     50% {
@@ -177,24 +178,24 @@ body {
         padding: 30px 20px;
         margin: 0 10px;
     }
-    
+
     .intro-title {
         font-size: 2rem;
     }
-    
+
     .intro-description {
         font-size: 1rem;
     }
-    
+
     .intro-features {
         gap: 20px;
     }
-    
+
     .feature-item {
         min-width: 100px;
         padding: 15px;
     }
-    
+
     .feature-icon {
         font-size: 2rem;
     }
