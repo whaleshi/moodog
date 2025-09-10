@@ -54,6 +54,32 @@ function App() {
           return (
             <>
               <MainBanner textures={textures} setIsAnimate={function () { }} />
+              
+              {/* 介绍内容区域 */}
+              <div className="intro-section">
+                <div className="intro-container">
+                  <div className="intro-card">
+                    <h2 className="intro-title">欢迎来到 MooDog</h2>
+                    <p className="intro-description">
+                      体验创新的视觉效果与交互设计
+                    </p>
+                    <div className="intro-features">
+                      <div className="feature-item">
+                        <div className="feature-icon">🚀</div>
+                        <div className="feature-text">高性能渲染</div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-icon">✨</div>
+                        <div className="feature-text">炫酷特效</div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-icon">🎨</div>
+                        <div className="feature-text">精美设计</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </>
           );
         } else {

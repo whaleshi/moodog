@@ -8,7 +8,7 @@ body,
     box-sizing: border-box;
     /* background: url('./components/MainBanner/images/wallPaper.jpg') center center / cover no-repeat; */
     background-size: cover;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: #000;
 }
 
@@ -42,4 +42,160 @@ canvas {
 body {
     background-size: 21.428571rem 21.428571rem;
     background-repeat: repeat;
+}
+
+/* 介绍内容区域样式 */
+.intro-section {
+    position: relative;
+    width: 100vw;
+    min-height: 50vh;
+    background: linear-gradient(180deg, #000 0%, #111 50%, #222 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+.intro-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    animation: cardFloat 3s ease-in-out infinite;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0 0 20px 0;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+    animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+.intro-description {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin: 0 0 40px 0;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.intro-features {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    animation: iconBounce 2s ease-in-out infinite;
+}
+
+.feature-item:nth-child(1) .feature-icon {
+    animation-delay: 0s;
+}
+
+.feature-item:nth-child(2) .feature-icon {
+    animation-delay: 0.3s;
+}
+
+.feature-item:nth-child(3) .feature-icon {
+    animation-delay: 0.6s;
+}
+
+.feature-text {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* 动画效果 */
+@keyframes cardFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes titleGlow {
+    0% {
+        text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        text-shadow: 0 2px 20px rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes iconBounce {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .intro-card {
+        padding: 30px 20px;
+        margin: 0 10px;
+    }
+    
+    .intro-title {
+        font-size: 2rem;
+    }
+    
+    .intro-description {
+        font-size: 1rem;
+    }
+    
+    .intro-features {
+        gap: 20px;
+    }
+    
+    .feature-item {
+        min-width: 100px;
+        padding: 15px;
+    }
+    
+    .feature-icon {
+        font-size: 2rem;
+    }
 }
