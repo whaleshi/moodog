@@ -1,0 +1,36 @@
+{
+  "name": "react-pixi-fiber-typescript-template",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.tsx",
+  "dependencies": {
+    "@bobliao/use-jquery-hook": "0.1.6",
+    "@craco/craco": "^7.1.0",
+    "@types/react": "18.2.37",
+    "@types/react-dom": "18.2.15",
+    "pixi.js": "6.5.10",
+    "prop-types": "15.8.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-pixi-fiber": "1.0.4",
+    "react-scripts": "5.0.1",
+    "resize-observer-polyfill": "1.5.1"
+  },
+  "devDependencies": {
+    "typescript": "5.3.3"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && yarn start"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
