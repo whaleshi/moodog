@@ -9,20 +9,29 @@
     "@craco/craco": "^7.1.0",
     "@types/react": "18.2.37",
     "@types/react-dom": "18.2.15",
-    "pixi.js": "6.5.10",
+    "pixi.js": "^4.8.9",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-pixi-fiber": "1.0.4",
+    "react-pixi-fiber": "^1.0.6",
     "react-scripts": "5.0.1",
     "resize-observer-polyfill": "1.5.1"
   },
   "devDependencies": {
-    "typescript": "5.3.3"
+    "@types/pixi.js": "^5.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "stream-browserify": "^3.0.0",
+    "typescript": "5.3.3",
+    "url": "^0.11.4",
+    "util": "^0.12.5"
   },
   "scripts": {
     "start": "craco start",
-    "build": "react-scripts build",
+    "build": "craco build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "dev": "set NODE_OPTIONS=--openssl-legacy-provider && yarn start"

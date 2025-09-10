@@ -10,7 +10,7 @@ import MainBanner from "./components/MainBanner";
 import "./styles.css";
 
 export interface textureArrCatch {
-  [propName: string]: PIXI.Texture<PIXI.Resource>;
+  [propName: string]: PIXI.Texture;
 }
 
 function App() {
@@ -53,7 +53,7 @@ function App() {
         if (isFinishedLoad && typeof textures !== "undefined") {
           return (
             <>
-              <MainBanner textures={textures} setIsAnimate={function () {}} />
+              <MainBanner textures={textures} setIsAnimate={function () { }} />
             </>
           );
         } else {
@@ -68,10 +68,10 @@ function App() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              background: "#fff",
+              background: "#000",
               zIndex: 9999
             }}>
-              <span style={{fontSize: 24, color: '#888'}}>Loading...</span>
+              <span style={{ fontSize: 24, color: '#888' }}>Loading...</span>
             </div>
           );
         }

@@ -19,7 +19,7 @@ import useJquery, {
 } from "@bobliao/use-jquery-hook";
 import * as PIXI from "pixi.js";
 export interface textureArrCatch {
-  [propName: string]: PIXI.Texture<PIXI.Resource>;
+  [propName: string]: PIXI.Texture;
 }
 
 /**
@@ -65,7 +65,7 @@ const ImagePageLoader: FC<iprops> = (
       _finishedCount++;
       setFinishedCount(_finishedCount);
       let base = new PIXI.BaseTexture(_pic);
-      let texture: PIXI.Texture<PIXI.Resource> = new PIXI.Texture(base);
+      let texture: PIXI.Texture = new PIXI.Texture(base);
       textures[_item] = texture;
       if (_finishedCount === totalCount) {
         setIsfinished(true);

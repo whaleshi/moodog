@@ -1,48 +1,45 @@
-
-
-
 html,
 body,
 #root {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background: url('./components/MainBanner/images/wallPaper.jpg') center center / cover no-repeat;
-  background-size: cover;
-  overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: url('./components/MainBanner/images/wallPaper.jpg') center center / cover no-repeat; */
+    background-size: cover;
+    overflow: hidden;
+    background-color: #000;
 }
-
 
 .container {
-  position: relative;
-  width: 100vw;
-  height: calc(100vw * (1283 / 1920));
-  max-height: 100vh;
-  margin: 0 auto;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  z-index: 1;
+    position: relative;
+    width: 100vw;
+    height: calc(100vw * (1283 / 1920));
+    max-height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    z-index: 1;
 }
 
 canvas {
-  width: 100vw !important;
-  height: calc(100vw * (1283 / 1920)) !important;
-  max-height: 100vh !important;
-  display: block;
+    width: 100vw !important;
+    height: calc(100vw * (1283 / 1920)) !important;
+    max-height: 100vh !important;
+    display: block;
 }
 
 canvas {
-  width: 100% !important;
-  height: 100% !important;
-  display: block;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
 }
 
 body {
-  background-size: 21.428571rem 21.428571rem;
-  background-repeat: repeat;
+    background-size: 21.428571rem 21.428571rem;
+    background-repeat: repeat;
 }

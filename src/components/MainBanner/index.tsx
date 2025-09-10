@@ -42,7 +42,7 @@ let mask = require("./images/mask.png");
 let bw = require("./images/wallPaper.jpg");
 
 export interface textureArrCatch {
-  [propName: string]: PIXI.Texture<PIXI.Resource>;
+  [propName: string]: PIXI.Texture;
 }
 
 /**
@@ -168,7 +168,9 @@ const MainBanner: FC<iprops> = (
       <div
         ref={container}
         className={"container"}
-        style={{ background: "url(" + bw + ")" }}
+        style={{ 
+          backgroundColor: "#000000"
+        }}
       >
         <PixiCompoent
           resolution={{
@@ -234,7 +236,7 @@ const PixiCompoent: FC<StageProps> = function ({
 }) {
   //===============useHooks================
   const $ = useJquery();
-  const ticker = PIXI.Ticker.shared;
+  const ticker = PIXI.ticker.shared;
 
   //-----------------------------state------------------------
   const [isMounted, setIsMounted] = useState<boolean>(false);
@@ -952,7 +954,7 @@ const PixiCompoent: FC<StageProps> = function ({
         {
           angle: 360
         },
-        50 * 1000
+        5 * 1000
       );
       setkeepTemp(+new Date());
     }
@@ -1131,10 +1133,8 @@ const PixiCompoent: FC<StageProps> = function ({
                       }
                     })()
                   )}
-                  position={{
-                    x: _prop.x,
-                    y: _prop.y
-                  }}
+                  x={_prop.x}
+                  y={_prop.y}
                   anchor={new PIXI.Point(0.5, 0.5)}
                   width={_prop.wh}
                   height={_prop.wh}
@@ -1246,8 +1246,8 @@ const PixiCompoent: FC<StageProps> = function ({
 
       <Stage
         options={{
-          backgroundAlpha: 0,
-          /* backgroundColor: PIXI.utils.string2hex("#fff0"), */
+          backgroundAlpha: 1,
+          backgroundColor: 0x000000,
           /**
            * 这里设置分辨率
            */
@@ -1271,10 +1271,8 @@ const PixiCompoent: FC<StageProps> = function ({
           {makeDots(yellowdotProps, 1920, 1000, 1920 / 15, 1000 / 15, true)}
         </Container>
         <Container
-          position={{
-            x: 467,
-            y: 644
-          }}
+          x={467}
+          y={644}
         >
           {genSprites(
             //
@@ -1290,10 +1288,8 @@ const PixiCompoent: FC<StageProps> = function ({
         </Container>
 
         <Container
-          position={{
-            x: 516,
-            y: 727
-          }}
+          x={516}
+          y={727}
         >
           {genSprites(
             //
@@ -1308,10 +1304,8 @@ const PixiCompoent: FC<StageProps> = function ({
           )}
         </Container>
         <Container
-          position={{
-            x: 1751,
-            y: 252
-          }}
+          x={1751}
+          y={252}
         >
           {genSprites(
             //
@@ -1333,10 +1327,8 @@ const PixiCompoent: FC<StageProps> = function ({
           ref={backlightRef}
         />
         <Container
-          position={{
-            x: 1379,
-            y: 535 - (1 - intersectionRatio) * 100
-          }}
+          x={1379}
+          y={535 - (1 - intersectionRatio) * 100}
         >
           <Sprite
             alpha={0}
@@ -1372,10 +1364,8 @@ const PixiCompoent: FC<StageProps> = function ({
           texture={getImageTexture(dotsMartix)}
           width={1920}
           height={1283}
-          position={{
-            x: 699,
-            y: 455 - (1 - intersectionRatio) * 60
-          }}
+          x={699}
+          y={455 - (1 - intersectionRatio) * 60}
           angle={-(1 - intersectionRatio) * 60}
           anchor={
             new PIXI.Point(699 / resolution.width, 455 / resolution.height)
@@ -1388,10 +1378,8 @@ const PixiCompoent: FC<StageProps> = function ({
           texture={getImageTexture(dog)}
           width={1920}
           height={1283}
-          position={{
-            x: 0,
-            y: -(1 - intersectionRatio) * 200
-          }}
+          x={0}
+          y={-(1 - intersectionRatio) * 200}
           alpha={0}
           ref={dogRef}
         />
@@ -1400,10 +1388,8 @@ const PixiCompoent: FC<StageProps> = function ({
           texture={getImageTexture(logo_shadow)}
           width={1920}
           height={1283}
-          position={{
-            x: cpLength.x / 150,
-            y: -((1 - intersectionRatio) * 80)
-          }}
+          x={cpLength.x / 150}
+          y={-((1 - intersectionRatio) * 80)}
           alpha={0}
           ref={logo_shadowRef}
         />
@@ -1411,10 +1397,8 @@ const PixiCompoent: FC<StageProps> = function ({
           texture={getImageTexture(logo)}
           width={1920}
           height={1283}
-          position={{
-            x: cpLength.x / 50,
-            y: -((1 - intersectionRatio) * 200)
-          }}
+          x={cpLength.x / 50}
+          y={-((1 - intersectionRatio) * 200)}
           alpha={0}
           ref={logoRef}
         />
